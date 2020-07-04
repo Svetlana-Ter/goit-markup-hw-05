@@ -639,10 +639,30 @@ footer .social-icon {
 }
 
 .examples-list .description {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--time-function);
+  
   color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
 
   font-size: 18px;
   line-height: 1.56;
-  display: none;
+}
+
+.examples-list .link:hover .description{
+  transform: translateY(0);
+}
+
+.examples-list .thumb {
+  position: relative;
+
+  overflow: hidden;
 }
