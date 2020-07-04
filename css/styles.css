@@ -115,7 +115,22 @@ header {
 }
 
 .site-menu .current {
+  position: relative;
+
   color: var(--accent-color);
+}
+
+.site-menu .current::after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* Контакты в хедере*/
