@@ -24,6 +24,7 @@ html {
   --white-color: #ffffff;
   --bg-color: #f5f4fa;
   --icon-color: #afb1b8;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -101,6 +102,8 @@ header {
   padding-top: 32px;
   padding-bottom: 32px;
 
+  transition: color 250ms var(--time-function);
+
   color: var(--titles-color);
 
   font-weight: 500;
@@ -143,9 +146,12 @@ header {
 }
 
 .contacts-info > a {
-  color: var(--primary-text-color);
   display: inline-flex;
   align-items: center;
+
+  transition: color 250ms var(--time-function);
+
+  color: var(--primary-text-color);
 
   font-style: normal;
   font-weight: 500;
@@ -299,6 +305,7 @@ header {
 }
 
 .work .item {
+  position: relative;
   width: calc((100% - 60px) / 3);
 }
 
@@ -307,10 +314,15 @@ header {
 }
 
 .work .title {
-  color: var(--white-color);
-  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
+
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
 
   font-weight: 700;
   font-size: 14px;
@@ -364,6 +376,9 @@ header {
   width: 44px;
   height: 44px;
   padding: 12px;
+
+  transition: background-color 250ms var(--time-function),
+    border-radius 250ms var(--time-function);
 }
 
 .social-media {
@@ -375,6 +390,8 @@ header {
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
+
+  transition: fill 250ms var(--time-function);
 }
 
 .social-link:hover,
@@ -406,10 +423,14 @@ header {
   height: 90px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+
+  transition: border 250ms var(--time-function);
 }
 
 .clients-icon {
   fill: var(--icon-color);
+
+  transition: fill 250ms var(--time-function);
 }
 
 .logo1 {
@@ -545,6 +566,9 @@ footer .social-icon {
 
   color: var(--titles-color);
   background-color: var(--bg-color);
+
+  transition: color 250ms var(--time-function),
+    background-color 250ms var(--time-function);
 
   font-family: inherit;
   font-weight: 500;
