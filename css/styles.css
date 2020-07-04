@@ -70,7 +70,13 @@ img {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  
   border-bottom: 1px solid #ececec;
+  
+  background-color: var(--white-color);
 }
 
 /* Лого */
@@ -316,6 +322,7 @@ header {
 .work .title {
   position: absolute;
   bottom: 0;
+  left: 0;
 
   width: 100%;
   padding-top: 27px;
@@ -657,7 +664,8 @@ footer .social-icon {
   line-height: 1.56;
 }
 
-.examples-list .link:hover .description{
+.examples-list .link:hover .description,
+.examples-list .link:focus .description{
   transform: translateY(0);
 }
 
